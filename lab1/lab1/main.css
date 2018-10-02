@@ -9,7 +9,6 @@ html,body{
 	width:100%;
 	height:80%;
 }
-
 #content{
 	width:70%;
 	float:left;
@@ -39,7 +38,7 @@ ul li{
 	padding:3px;
 	display:inline-table;
 }
-#menu ul li a{
+#menu ul li a, p.non-active{
 	padding:20px;
 	line-height:40px;
 	color:dimgray;
@@ -47,6 +46,9 @@ ul li{
 	text-transform:uppercase;
 	font-weight:bold;
 	text-decoration:none;
+}
+p.non-active{
+	color:black;
 }
 .slide_img{
 	height:20%;
