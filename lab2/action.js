@@ -1,4 +1,4 @@
-"use strict"
+﻿"use strict"
 var main = (function () {
     let body = document.querySelector("body"),
         calendar = addItem("div", "class", "calendar", ""),
@@ -57,8 +57,8 @@ var main = (function () {
         if (curr_day != 32) {
             calendar.querySelector("#active").removeAttribute("id");
         }
-        curr_day = this.value;
-        if (curr_day <= count_days[curr_month]) {
+        curr_day = +this.value;
+        if (curr_day <= count_days[curr_month]&&curr_day>0) {
             calendar.querySelector(".id" + curr_day).id = "active";
         } else {
             curr_day = 32;
