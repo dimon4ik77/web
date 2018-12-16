@@ -8,10 +8,9 @@ var main = (function () {
         months = ['Сiчень', 'Лютий', 'Березень', 'Квiтень', 'Травень', 'Червень',
                   'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'],
         count_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-        date = new Date(),
-        curr_month = date.getMonth(),
-        curr_year = date.getFullYear(),
-        curr_day = date.getDay(),
+        curr_month = 11,
+        curr_year = 2018,
+        curr_day = 17,
         input_year = addItem("input", "value", curr_year, ""),
         input_day = addItem("input", "value", curr_day, "");
 
@@ -58,7 +57,7 @@ var main = (function () {
             calendar.querySelector("#active").removeAttribute("id");
         }
         curr_day = +this.value;
-        if (curr_day <= count_days[curr_month]&&curr_day>0) {
+        if (curr_day <= count_days[curr_month] && curr_day > 0) {
             calendar.querySelector(".id" + curr_day).id = "active";
         } else {
             curr_day = 32;
